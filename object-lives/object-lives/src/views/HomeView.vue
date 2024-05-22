@@ -1,6 +1,6 @@
 <template>
     <div>
-      <header class="bg-dark text-white py-3 mb-4">
+      <header class="bg-dark text-white py-3">
         <div class="container">
           <h1 class="display-1">Object lives and Global histories in Northern North America: 1700s - 2000s</h1>
         </div>
@@ -13,34 +13,34 @@
               <router-link to="/" class="nav-link">Home</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/page1" class="nav-link">The Project</router-link>
+              <router-link to="/TheProject" class="nav-link">The Project</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/page2" class="nav-link">The Contributors</router-link>
+              <router-link to="/TheContributors" class="nav-link">The Contributors</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/page3" class="nav-link">Discovery Process</router-link>
+              <router-link to="/DiscoveryProcess" class="nav-link">Discovery Process</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/page4" class="nav-link">Discovery Workshop</router-link>
+              <router-link to="/DiscoveryWorkshop" class="nav-link">Discovery Workshop</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/page5" class="nav-link">Publications</router-link>
+              <router-link to="/Publications" class="nav-link">Publications</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/page6" class="nav-link">Support</router-link>
+              <router-link to="/Support" class="nav-link">Support</router-link>
             </li>
           </ul>
         </div>
       </nav>
   
       <div class="container">
-        <h2>Image</h2>
-        <!-- Add your home page content here -->
+        <img src="../assets/Image-01.jpg" alt="Your Image" class="img-fluid">
       </div>
     </div>
   </template>
   
-  <script lang="ts">
-  </script>
   
+    <script lang="ts">
+    </script>
+    
