@@ -116,7 +116,7 @@
   
     .image-container {
       img {
-        aspect-ratio: 1/1.2; // Adjust the aspect ratio for smaller screens
+        aspect-ratio: 1/1.2;
       }
     }
   }

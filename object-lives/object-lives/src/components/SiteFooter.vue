@@ -20,14 +20,13 @@
     display: flex;
     align-items: center;
     gap: 20px; 
-    margin-right: 20px; 
+    margin-right: 20px;
     margin-left: 20px; 
-    padding-bottom: 0px;
   }
   
   .social-icon {
     color: #fff;
-    font-size: 15px; 
+    font-size: 13px;
     transition: color 0.3s;
   
     &:hover {
