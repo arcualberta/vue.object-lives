@@ -2,5 +2,5 @@
     <h1>Project Page</h1>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 </script>
