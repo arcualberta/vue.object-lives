@@ -1,12 +1,12 @@
 <template>
-    <footer class="bg-black text-white py-2 text-center"> <!-- Reduced padding-top and padding-bottom -->
+    <footer class="bg-black text-white py-2 text-center"> <!-- remember: Change padding as per need  -->
       <div class="container">
-        <div class="social-icons d-lg-none mb-2"> <!-- Reduced bottom margin -->
+        <div class="social-icons d-lg-none mb-2"> <!-- remember: Change padding as per need  -->
           <a href="https://www.facebook.com/objectlives/" target="_blank" class="social-icon">
-            <font-awesome-icon icon="fa-brands fa-facebook-f" size="lg" /> <!-- Reduced icon size -->
+            <font-awesome-icon icon="fa-brands fa-facebook-f" size="lg" /> 
           </a>
           <a href="https://x.com/i/flow/login?redirect_after_login=%2FObjectLives" target="_blank" class="social-icon">
-            <font-awesome-icon icon="fa-brands fa-x-twitter" size="lg" /> <!-- Reduced icon size -->
+            <font-awesome-icon icon="fa-brands fa-x-twitter" size="lg" /> 
           </a>
         </div>
       </div>
