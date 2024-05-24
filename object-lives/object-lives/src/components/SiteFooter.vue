@@ -6,7 +6,7 @@
             <font-awesome-icon icon="fa-brands fa-facebook-f" size="lg" /> 
           </a>
           <a href="https://x.com/i/flow/login?redirect_after_login=%2FObjectLives" target="_blank" class="social-icon">
-            <font-awesome-icon icon="fa-brands fa-x-twitter" size="lg" /> 
+            <font-awesome-icon icon="fa-brands fa-x-twitter" size="lg" />
           </a>
         </div>
       </div>

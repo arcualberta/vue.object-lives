@@ -7,6 +7,7 @@
 <script setup lang="ts">
 </script>
 
+
 <style lang="scss" scoped>
 .image-container {
   position: relative;
