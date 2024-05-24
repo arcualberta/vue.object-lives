@@ -42,7 +42,7 @@
               <font-awesome-icon icon="fa-brands fa-facebook-f" />
             </a>
             <a href="https://x.com/i/flow/login?redirect_after_login=%2FObjectLives" target="_blank" class="social-icon">
-              <font-awesome-icon icon="fa-brands fa-x-twitter" />
+                <font-awesome-icon icon="fa-brands fa-x-twitter" />
             </a>
           </div>
         </div>
