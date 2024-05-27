@@ -2,7 +2,7 @@
     <div class="container">
       <div class="content-wrapper">
         <div class="image-container">
-          <img src="../assets/Image-02.jpg" alt="Your Image" class="img-fluid">
+          <img src="../assets/Image-02.jpg" alt="Publication" class="img-fluid">
         </div>
         <div class="content-container">
           <p class="text-1">OBJECT LIVES AND GLOBAL HISTORIES IN NORTHERN NORTH AMERICA</p>
@@ -10,11 +10,9 @@
           <p class="editors">
             Edited by:
             <a href="https://www.mqup.ca/lemire--beverly-contributor-108920.php" target="_blank" rel="noopener noreferrer" class="no-underline italic-link">
-              Beverly Lemire
-            </a>,
+              Beverly Lemire</a>, &nbsp;
             <a href="https://www.mqup.ca/peers--laura-contributor-105515.php" target="_blank" rel="noopener noreferrer" class="no-underline italic-link">
-              Laura Peers 
-            </a> &
+              Laura Peers</a> &nbsp;&&nbsp;
             <a href="https://www.mqup.ca/whitelaw--anne-contributor-117499.php" target="_blank" rel="noopener noreferrer" class="no-underline italic-link">
               Anne Whitelaw
             </a>
@@ -33,7 +31,7 @@
   </script>
   
   <style lang="scss" scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
   
   .container {
     display: flex;
@@ -51,6 +49,7 @@
   .image-container {
     width: 100%;
     overflow: hidden;
+   
   
     img {
       max-width: 100%;
@@ -61,7 +60,7 @@
   }
   
   .content-container {
-    font-family: 'Proxima Nova', sans-serif;
+    font-family: 'DM Sans';
     text-align: center;
   
     a {
