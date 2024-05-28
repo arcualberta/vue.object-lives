@@ -136,7 +136,7 @@ p {
 }
 
 .paragraph-separator {
-  margin-top: 40px; /* Gap after the last paragraph */
+  margin-top: 40px;
   border-bottom: 1px solid #eaeaea;
   margin-bottom: 30px;
 }
