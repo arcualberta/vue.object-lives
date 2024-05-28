@@ -59,7 +59,9 @@
 
 <script setup lang="ts"></script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 .page-container {
   text-align: left;
   background-color: #1a1a1a;
@@ -87,7 +89,7 @@
   padding: 20px;
   background-color: #1a1a1a;
   border-radius: 5px;
-  font-family: "Proxima Nova", sans-serif;
+  font-family: "DM Sans";
   line-height: 1.6em;
   letter-spacing: 1px;
   font-style: normal;
@@ -95,7 +97,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  font-family: "proxima-nova";
 }
 
 .project-block-content {
