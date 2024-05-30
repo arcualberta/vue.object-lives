@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { HomeView, ContributorsView, DiscoveryView, DiscoveryWorkshopView, PublicationsView, ProjectView, SupportView } from '@/views'
+import { AnnetteView, AnneWhitelawView, BeverlyLemireView, CynthiaCooperView, JonathanLaineyView, JudyHalfView, JulieAnnView, KatiePollockView, LauraPeersView, LaurieBertramView, SarahCarterView, SarahKomarniskyView, SarahNesbittView, SusanBerryView } from '@/views'
 
 
 const routes = [
@@ -37,6 +38,76 @@ const routes = [
     path: '/Support',
     name: 'Support',
     component: SupportView
+  },
+  {
+    path: '/TheContributors/Annette',
+    name: 'Annette',
+    component: AnnetteView
+  },
+  {
+    path: '/TheContributors/AnneWhitelaw',
+    name: 'AnneWhitelawView',
+    component: AnneWhitelawView
+  },
+  {
+    path: '/TheContributors/BeverlyLemire',
+    name: 'BeverlyLemireView',
+    component: BeverlyLemireView
+  },
+  {
+    path: '/TheContributors/CynthiaCooper',
+    name: 'CynthiaCooperView',
+    component: CynthiaCooperView
+  },
+  {
+    path: '/TheContributors/JonathanLainey',
+    name: 'JonathanLaineyView',
+    component: JonathanLaineyView
+  },
+  {
+    path: '/TheContributors/JudyHalf',
+    name: 'JudyHalfView',
+    component: JudyHalfView
+  },
+  {
+    path: '/TheContributors/JulieAnn',
+    name: 'JulieAnnView',
+    component: JulieAnnView
+  },
+  {
+    path: '/TheContributors/KatiePollock',
+    name: 'KatiePollockView',
+    component: KatiePollockView
+  },
+  {
+    path: '/TheContributors/LauraPeers',
+    name: 'LauraPeersView',
+    component: LauraPeersView
+  },
+  {
+    path: '/TheContributors/LaurieBertram',
+    name: 'LaurieBertramView',
+    component: LaurieBertramView
+  },
+  {
+    path: '/TheContributors/SarahCarter',
+    name: 'SarahCarterView',
+    component: SarahCarterView
+  },
+  {
+    path: '/TheContributors/SaraKomarnisky',
+    name: 'SarahKomarniskyView',
+    component: SarahKomarniskyView
+  },
+  {
+    path: '/TheContributors/SarahNesbitt',
+    name: 'SarahNesbittView',
+    component: SarahNesbittView
+  },
+  {
+    path: '/TheContributors/SusanBerry',
+    name: 'SusanBerryView',
+    component: SusanBerryView
   }
 ]
 

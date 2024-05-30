@@ -53,7 +53,7 @@
   <script setup lang="ts"></script>
   
   <style lang="scss" scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
   
   .header-container {
     display: flex;
@@ -66,7 +66,7 @@
   }
   
   h1 {
-    font-family: 'Proxima Nova', sans-serif;
+    font-family: 'DM Sans';
     font-size: 30px;
     background-color: rgba(199, 35, 35, 0);
     padding: 3px;
@@ -75,6 +75,7 @@
   
   .navbar {
     background-color: black;
+    font-family: 'DM Sans';
   
     .nav-link {
       &:hover {
