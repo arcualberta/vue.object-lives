@@ -103,17 +103,10 @@
   }
   .content-container {
 
-    .text-1 {
+    .text-1, .text-2, .text-3 {
       font-size: $fontSize;
     }
 
-    .text-2 {
-      font-size: $fontSize;
-    }
-
-    .text-3 {
-      font-size: $fontSize;
-    }
   }
 
   .image-container {

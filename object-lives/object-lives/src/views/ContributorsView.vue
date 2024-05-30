@@ -97,7 +97,7 @@
             <p class="heading-02">Co-Applicant</p>
             <router-link to="/TheContributors/LauraPeers" class="content">Laura Peers</router-link>
             <p class="content-01">Curator - Americas Collection<br>Pitt Rivers Museum<br>Professor of Museum<br>Anthropology<br>School of Anthropology &<br>Museum Ethnography<br>University of Oxford.</p>
-            <a href="mailto:laura.peers@prm.ox.ac.uk" class="content">laura.peers@prm.ox.ac.uk</a>
+            <a href="mailto:laura.peers@prm.ox.ac.uk" class="content newline">laura.peers@prm.ox.ac.uk</a>
           </div>
         </div>
       </div>
@@ -106,92 +106,102 @@
   
   <script setup lang="ts">
   </script>
+  <style lang="scss" scoped>
   
-<style lang="scss" scoped>
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-  
-    .container {
+  @import '@/assets/variables.scss';
+
+  .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-y: auto;
+    background-color: $pageBackgroundColor;
+    padding: 0 0 20px 0;
+    overflow-x: hidden;
+    max-width: $maxWidth;
+    font-family: $fontFamily;
+    text-align: center;
+  }
+  
+  .text-container {
+    display: flex;
+    justify-content: justify;
+    width: 100%;
+    max-width: 770px;
+    margin-top: $marginTop;
+    margin-bottom: $marginBottom;
+    margin-left: 6px;
+    font-size: $fontSize;
+    color: $textFontColor;
+  
+    .part-padding {
+      padding-top: 20px;
     }
-
-    .image-container {
+  
+    .heading {
+      font-weight: bolder;
+      padding-bottom: 20px;
+      font-size: 20px;
+    }
+  
+    .heading-02 {
+      margin: $minvalue;
+      padding: $minvalue;
+      font-style: italic;
+      font-size: 14px;
+    }
+  
+    .content-01 {
+      margin: $minvalue;
+      padding: $minvalue;
+    }
+  
+    .content {
+      text-decoration: none;
+      color: $linkColor;
+    }
+  }
+  
+  .image-container {
     width: 100%;
     max-width: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-top: $marginTop;
+  
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
-
-    .image-container img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 20px;
-    }
-
-    .text-container {
-    display: flex;
-    font-family: 'DM Sans';
-    justify-content: center;
-    width: 100%;
-    max-width: 750px;
-    margin-top: -10px;
-    margin-bottom: 30px;
-    margin-left: 80px;
-    font-size: 13px;
-    }
-
-    .column {
+  }
+  
+  .column {
     flex: 1;
-    padding: 3px;
+    padding: 20px;
     text-align: left;
-    }
-
-    .heading {
-    font-size: 18px;
-    margin-bottom: -2px;
-    }
-
-    .heading-02 {
-        margin-bottom: -1px;
-        font-style:italic;
-        font-weight: 500;
-    }
-
-    .content, .content-01 {
-        margin-bottom: 1px;
-    }
-
-    .content {
-        font-weight: 500;
-        text-decoration: none;
-    }
-    
-    .part-padding {
-    padding-top: 15px;
-    }
-
-  @media (max-width: 768px) {
+  }
+  
+  @media (max-width: $smallScreenBreakpoint) {
     .text-container {
       flex-direction: column;
       align-items: flex-start;
+      margin-bottom: $marginBottom;
+    }
+  
+    .column, .heading {
+      margin-bottom: -20px;
     }
 
-    .column {
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
     .image-container {
-      img {
-      aspect-ratio: 1/0.5;
-      }
+     img {
+      aspect-ratio: 1.5/0.7;
+      max-height: 30vh;
+      max-width: 70vh;
     }
+  }
+  }
 
-}
 </style>
