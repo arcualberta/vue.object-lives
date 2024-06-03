@@ -23,14 +23,21 @@
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import '@/assets/variables.scss';
 
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: $pageBackgroundColor;
+    overflow-x: hidden;
+    max-width: $maxWidth;
+    font-family: $fontFamily;
+    text-align: center;
+    
 }
+
 
 .image-container {
     width: 100%;
@@ -39,50 +46,55 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-}
+    margin-bottom: $marginBottom;
+   
 
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: -100px;
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        
+    }
 }
 
 .text-container {
-    font-family: 'DM Sans';
+    font-family: $fontFamily;
+    color: $textFontColor;
     max-width: 800px;
     justify-content: center;
-    margin-bottom: 20px;
-}
-
-.heading {
-    margin-top: 10px;
-    font-style: italic;
-    font-weight: bolder;
-    font-size: 15px;
-}
-
-.introduction {
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.description {
-    font-size: 14px;
+    margin-bottom: $marginBottom;
     text-align: justify;
+
+    .heading {
+        color: $titleFontColor;
+        margin-top: 10px;
+        font-style: italic;
+        font-weight: bolder;
+        font-size: $fontSize;
+    }
+    .introduction {
+        color: $titleFontColor;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .description {
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    .emailcontent {
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: bold;
+        margin-top: 2px;
+        color: $linkColor;
+    }
 }
 
-.emailcontent {
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    margin-top: 2px;
-}
-
-@media (max-width: 768px) {
+@media (max-width: $smallScreenBreakpoint) {
     .container {
-        padding: 0 20px;
+        padding: 0px 20px;
     }
 
     .text-container {
@@ -105,7 +117,6 @@
     .image-container {
         img {
             aspect-ratio: 1/0.5;
-            margin-top: -80px;
         }
     }
 }
