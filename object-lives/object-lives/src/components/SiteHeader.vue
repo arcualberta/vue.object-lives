@@ -105,10 +105,8 @@ h1 {
   display: inline-block;
   color: #fff;
   font-size: 24px;
-  margin-left: 23rem;
-}
-.login-icon {
-  margin-right: 0.5rem;
+  margin-left: 22.8rem;
+
 }
 
 .login-text {
@@ -123,7 +121,7 @@ h1 {
 
 .social-icon {
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   transition: color 0.3s;
 
   &:hover {
@@ -131,7 +129,7 @@ h1 {
   }
 }
 
-@media (max-width: $smallScreenBreakpoint) {
+@media (min-width: 280px) and (max-width: 920px) {
   .login-link {
     margin-left: 0;
   }
@@ -148,6 +146,7 @@ h1 {
   .login-link {
     order: 3;
     font-size: 15px;
+
   }
 
   .login-text {
@@ -156,6 +155,72 @@ h1 {
 
   h1 {
     font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1025px) {
+  .login-link {
+    margin-left: 4rem; 
+    font-size: 18px;
+  }
+
+  .nav-links {
+    order: 1;
+  }
+
+  .social-icons {
+    order: 2;
+    margin-left: 2px;
+    gap: 15px;
+
+    a {
+      font-size: 18px;
+    }
+  }
+
+  .login-link {
+    order: 3;
+  }
+
+  
+  .nav-link {
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1026px) and (max-width: 1280px) {
+  .login-link {
+    margin-left: 14rem;
+    margin-right: 1.2rem;
+    font-size: 18px;
+  }
+
+  .nav-links {
+    order: 1;
+    margin-right: auto;
+  }
+
+  .navbar {
+    font-size: 15px;
+  }
+
+
+  .social-icons {
+    order: 2;
+    margin-right: 2rem;
+
+    a {
+      font-size: 18px;
+    }
+    
+    }
+
+  .login-link {
+    order: 3;
+  }
+
+  .nav-link {
+    white-space: nowrap;
   }
 }
 
