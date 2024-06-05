@@ -35,6 +35,9 @@
               <router-link to="/Support" class="nav-link">Support</router-link>
             </li>
             <li class="nav-item">
+              <router-link to="/SubmissionWorkshop" class="nav-link">Workshop Submission</router-link>
+            </li>
+            <li class="nav-item">
               <router-link to="/Login" class="nav-link login-link" aria-label="Login">
                 <font-awesome-icon icon="right-to-bracket" class="login-icon" />
                 <span class="login-text">Login</span>
@@ -105,7 +108,7 @@ h1 {
   display: inline-block;
   color: #fff;
   font-size: 24px;
-  margin-left: 22.8rem;
+  margin-left: 11.8rem;
 
 }
 
