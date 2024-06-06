@@ -164,11 +164,18 @@ h1 {
 @media (min-width: 921px) and (max-width: 1025px) {
   .login-link {
     margin-left: 4rem; 
-    font-size: 18px;
+    font-size: 13px;
+    margin-right: 0.5rem; 
+  }
+
+  .nav-item {
+    font-size: 13px;
   }
 
   .nav-links {
     order: 1;
+    font-size: 10px;
+
   }
 
   .social-icons {
@@ -177,7 +184,7 @@ h1 {
     gap: 15px;
 
     a {
-      font-size: 18px;
+      font-size: 13px;
     }
   }
 
@@ -193,8 +200,8 @@ h1 {
 
 @media (min-width: 1026px) and (max-width: 1280px) {
   .login-link {
-    margin-left: 14rem;
-    margin-right: 1.2rem;
+    margin-left: 7rem;
+    margin-right: 1.4rem;
     font-size: 18px;
   }
 
