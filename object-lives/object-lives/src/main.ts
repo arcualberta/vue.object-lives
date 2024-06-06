@@ -10,6 +10,9 @@ import { faRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import * as ArcAuthorization from '@arc/authorization'
 import vue3GoogleLogin from 'vue3-google-login'
+
+import {default as config} from './appsettings'
+
 const app = createApp(App)
 const pinia = createPinia()
 
