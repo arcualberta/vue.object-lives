@@ -23,7 +23,7 @@ export default {
     // tenantId:"a4a50d9f-fd20-4d74-8274-2acad28a6553",
     googleLoginClientId:googleClientId,
      //on prod auth.api
-    appId: "22edb968-b74c-4826-bef0-6fda9d6c349d" as unknown as Guid
+    // appId: "22edb968-b74c-4826-bef0-6fda9d6c349d" as unknown as Guid
 };
 
 
