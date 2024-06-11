@@ -61,7 +61,17 @@ const formSubmissionCallback = (submissionStatus: StatusCodes): void => {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 20px;
+  text-align: left;
+  position: absolute;
+  left: 230px;
+  
+
 }
+.hovertext{
+  display: none;
+}
+
+
 .add-button{
   background-color: #327D49;
   color: white;
@@ -69,6 +79,9 @@ const formSubmissionCallback = (submissionStatus: StatusCodes): void => {
   border: none;
   padding: 5px 5px;
   margin-bottom: 20px;
+  position: relative;
+  top: -40px;
+  left: -20px;
 }
 .submit-button{
   background-color: #327D49;
@@ -77,6 +90,10 @@ const formSubmissionCallback = (submissionStatus: StatusCodes): void => {
   border: none;
   padding: 5px 5px;
   margin-bottom: 20px;
+  position: relative;
+  top: -40px;
+  left: 40px;
+  color: white;
 }
 .form-details{
   background-color: white;
@@ -130,6 +147,11 @@ const formSubmissionCallback = (submissionStatus: StatusCodes): void => {
 .compositeField{
   padding: 10px;
   margin-bottom: 30px;
+  position:relative;
+  right: -10px;
+  bottom: -50px;
+  height: 600px;
+  width: 1200px;
 }
 .lightGrayBorder{
   border: 1px solid lightgray;
