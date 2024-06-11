@@ -27,91 +27,101 @@
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import '@/assets/variables.scss';
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $pageBackgroundColor;
+    overflow-x: hidden;
+    max-width: $maxWidth;
+    font-family: $fontFamily;
+    text-align: center;
+    
+}
 
-    .image-container {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-    }
 
-    .image-container img {
+.image-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $marginBottom;
+   
+
+    img {
         max-width: 100%;
         height: auto;
         display: block;
-        margin-bottom: 20px;
-        margin-left: 120px;
+        
     }
+}
 
-    .text-container {
-        font-family: 'DM Sans';
-        max-width: 800px;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
+.text-container {
+    font-family: $fontFamily;
+    color: $textFontColor;
+    max-width: 800px;
+    justify-content: center;
+    margin-bottom: $marginBottom;
+    text-align: justify;
 
     .heading {
+        color: $titleFontColor;
         margin-top: 10px;
         font-style: italic;
         font-weight: bolder;
-        font-size: 15px;
+        font-size: $fontSize;
     }
-
     .introduction {
-        font-size: 14px;
+        color: $titleFontColor;
+        font-size: 13px;
         font-weight: bold;
     }
 
     .description {
-        font-size: 14px;
+        font-size: 13px;
         text-align: justify;
     }
 
     .emailcontent {
         text-decoration: none;
-        font-size: 14px;
-        font-weight: 500;
+        font-size: 13px;
+        font-weight: bold;
         margin-top: 2px;
+        color: $linkColor;
+    }
+}
+
+@media (max-width: $smallScreenBreakpoint) {
+    .container {
+        padding: 0px 20px;
     }
 
-    @media (max-width: 768px) {
-        .container {
-            padding: 0 20px;
-        }
+    .text-container {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 60px;
+    }
 
-        .text-container {
-            max-width: 100%;
-            text-align: center;
-            margin-bottom: 60px;
-        }
+    .heading, .introduction {
+        text-align: justify;
+    }
 
-        .heading, .introduction {
-            text-align: justify;
-        }
+    .emailcontent {
+        text-align: left; 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-        .emailcontent {
-            text-align: left; 
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .image-container {
-            img {
-                aspect-ratio: 1/0.5;
-                margin-top: -80px;
-            }
+    .image-container {
+        img {
+            aspect-ratio: 1/0.5;
         }
     }
+}
 </style>

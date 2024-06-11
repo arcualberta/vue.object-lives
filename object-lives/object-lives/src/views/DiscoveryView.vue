@@ -287,53 +287,50 @@
 </script>
 
 <style lang="scss" scoped>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-  
+
+    @import '@/assets/variables.scss';
+
     .container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         overflow-y: auto;
-        max-width: 1000px;
-        font-family: 'DM Sans';
-        font-size: 15px;
-        margin-bottom: 50px;
+        max-width: 100%;
+        font-family: $fontFamily;
+        font-size: $fontSize;
+        padding-Bottom: 40px;
+        background-color: $pageBackgroundColor;
     }
 
-    .image-container img {
+    .image-container {
         max-width: 100%;
         height: auto;
         display: block;
         margin-top: 40px;
         margin-bottom: 20px;
+    
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 40px;
+        }
     }
 
-
-    .image-container img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin-top: 40px;
-    }
-
-    .text-container p {
+    .text-container {
+        color: $textFontColor;
+        max-width: 950px;
         text-align: justify;
-    }
 
-    .text {
-        font-style: italic;
-    }
+        .text {
+            font-style: italic;
+        }
 
-    .text-container hr {
-        border:2px;
-        border-top: 2px solid black;
-    }
-
-
-    .introduction {
-        font-style: italic;
-        font-size: 12px;
+        .introduction {
+            font-style: italic;
+            font-size: 12px;
+        }   
     }
 
     .image-container_02 {
@@ -367,19 +364,18 @@
     }
 
     .image-overlay h2 {
-        font-family: 'DM Sans';
-        font-size: 14px;
+        font-family: $fontFamily;
+        font-size: $fontSize;
         margin: 0;
     }
 
 
-    @media (max-width: 768px) {
+@media (max-width: $smallScreenBreakpoint) {
 
-        .image-container {
+    .image-container {
         img {
             max-height: 300px;
         }
     }
-
 }
 </style>
