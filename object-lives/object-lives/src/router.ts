@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { HomeView, ContributorsView, DiscoveryView, DiscoveryWorkshopView, PublicationsView, ProjectView, SupportView } from '@/views'
+import { HomeView, ContributorsView, DiscoveryView, DiscoveryWorkshopView, PublicationsView, ProjectView, SupportView, loginView, SubmissionWorkshopView } from '@/views'
 import { AnnetteView, AnneWhitelawView, BeverlyLemireView, CynthiaCooperView, JonathanLaineyView, JudyHalfView, JulieAnnView, KatiePollockView, LauraPeersView, LaurieBertramView, SarahCarterView, SarahKomarniskyView, SarahNesbittView, SusanBerryView } from '@/views'
+
 
 
 const routes = [
@@ -108,6 +109,16 @@ const routes = [
     path: '/TheContributors/SusanBerry',
     name: 'SusanBerryView',
     component: SusanBerryView
+  },
+  {
+    path: '/Login',
+    name: 'LoginView',
+    component: loginView
+  },
+  {
+    path: '/SubmissionWorkshop',
+    name: 'SubmissionWorkshopView',
+    component: SubmissionWorkshopView
   }
 ]
 

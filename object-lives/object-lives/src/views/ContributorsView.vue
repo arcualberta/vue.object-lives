@@ -184,7 +184,7 @@
     text-align: left;
   }
   
-  @media (max-width: $smallScreenBreakpoint) {
+  @media (min-width: $smallScreenBreakpoint) and (max-width: 700px){
     .text-container {
       flex-direction: column;
       align-items: flex-start;
@@ -199,7 +199,8 @@
      img {
       aspect-ratio: 1.5/0.7;
       max-height: 30vh;
-      max-width: 70vh;
+      max-width: 45vh;
+      
     }
   }
   }
