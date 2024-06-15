@@ -9,13 +9,15 @@
 
 <script setup lang="ts"></script>
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "@/assets/variables.scss";
 
 .support-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1a1a1a;
+  background-color: var(
+    --page-background-color
+  ); /* Assuming you have a background color variable */
 }
 
 .image-container {
@@ -23,7 +25,9 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: var(
+    --margin-top
+  ); /* Using margin-top variable from variables.scss */
 }
 
 .image {
