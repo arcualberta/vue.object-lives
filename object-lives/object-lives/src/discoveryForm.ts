@@ -1,4 +1,4 @@
-{
+export const discoveryform = {
     "id": "93d3bd1d-d697-70ae-31a4-11773216883c",
     "name": "object_lives",
     "description": "This form helps to edit the objectlives's discovery workshop page",
@@ -419,3 +419,4 @@
     ],
     "status": "Draft"
 }
+
