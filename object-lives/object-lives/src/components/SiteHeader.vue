@@ -95,6 +95,9 @@
 </template>
 
 <script setup lang="ts"></script>
+
+<script setup lang="ts"></script>
+
 <style lang="scss" scoped>
 @import "@/assets/variables.scss";
 
@@ -105,24 +108,27 @@
 
 header {
   position: relative;
-  background-color: var(--header-background-color);
+  background-color: black;
 }
 
 h1 {
-  font-family: var(--font-family);
-  font-size: var(--heading-font-size);
-  color: var(--title-font-color);
+  font-size: 30px;
   background-color: rgba(199, 35, 35, 0);
   padding: 3px;
   margin-bottom: -10px;
 }
 
 .navbar {
-  background-color: var(--header-background-color);
-  font-family: var(--font-family);
+  background-color: black;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
 
   .nav-link {
     &:hover {
@@ -133,8 +139,8 @@ h1 {
 
 .login-link {
   display: inline-block;
-  color: var(--link-color);
-  font-size: var(--font-size);
+  color: #fff;
+  font-size: 24px;
   margin-left: 11.8rem;
 }
 
@@ -149,7 +155,7 @@ h1 {
 }
 
 .social-icon {
-  color: var(--link-color);
+  color: #fff;
   font-size: 20px;
   transition: color 0.3s;
 
@@ -161,6 +167,20 @@ h1 {
 @media (min-width: 280px) and (max-width: 920px) {
   .login-link {
     margin-left: 0;
+  }
+
+  .nav-links {
+    order: 1;
+  }
+
+  .social-icons {
+    order: 2;
+    margin-right: 0;
+  }
+
+  .login-link {
+    order: 3;
+    font-size: 15px;
   }
 
   .login-text {
@@ -183,12 +203,27 @@ h1 {
     font-size: 13px;
   }
 
+  .nav-links {
+    order: 1;
+    font-size: 10px;
+  }
+
   .social-icons {
+    order: 2;
+    margin-left: 2px;
     gap: 15px;
 
     a {
       font-size: 13px;
     }
+  }
+
+  .login-link {
+    order: 3;
+  }
+
+  .nav-link {
+    white-space: nowrap;
   }
 }
 
@@ -199,16 +234,30 @@ h1 {
     font-size: 18px;
   }
 
+  .nav-links {
+    order: 1;
+    margin-right: auto;
+  }
+
   .navbar {
     font-size: 15px;
   }
 
   .social-icons {
+    order: 2;
     margin-right: 2rem;
 
     a {
       font-size: 18px;
     }
+  }
+
+  .login-link {
+    order: 3;
+  }
+
+  .nav-link {
+    white-space: nowrap;
   }
 }
 </style>
