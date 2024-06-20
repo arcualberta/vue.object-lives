@@ -13,7 +13,7 @@
   "dependencies": {
     "@arc/arc-foundation": "^0.5.35",
     "@arc/authorization": "^0.0.24",
-    "@arc/form-submission": "^0.1.106",
+    "@arc/form-submission": "^0.1.108",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",

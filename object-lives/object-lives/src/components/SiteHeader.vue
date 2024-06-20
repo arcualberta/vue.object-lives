@@ -2,13 +2,24 @@
   <div class="header-container">
     <header class="bg-black text-white py-2">
       <div class="container d-flex justify-content-between align-items-center">
-        <h1 class="display-1 header-text">Object lives and Global histories in Northern North America: 1700s - 2000s</h1>
+        <h1 class="display-1 header-text">
+          Object lives and Global histories in Northern North America: 1700s -
+          2000s
+        </h1>
       </div>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
       <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -17,28 +28,44 @@
               <router-link to="/" class="nav-link">Home</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/TheProject" class="nav-link">The Project</router-link>
+              <router-link to="/TheProject" class="nav-link"
+                >The Project</router-link
+              >
             </li>
             <li class="nav-item">
-              <router-link to="/TheContributors" class="nav-link">The Contributors</router-link>
+              <router-link to="/TheContributors" class="nav-link"
+                >The Contributors</router-link
+              >
             </li>
             <li class="nav-item">
-              <router-link to="/DiscoveryProcess" class="nav-link">Discovery Process</router-link>
+              <router-link to="/DiscoveryProcess" class="nav-link"
+                >Discovery Process</router-link
+              >
             </li>
             <li class="nav-item">
-              <router-link to="/DiscoveryWorkshop" class="nav-link">Discovery Workshop</router-link>
+              <router-link to="/DiscoveryWorkshop" class="nav-link"
+                >Discovery Workshop</router-link
+              >
             </li>
             <li class="nav-item">
-              <router-link to="/Publications" class="nav-link">Publications</router-link>
+              <router-link to="/Publications" class="nav-link"
+                >Publications</router-link
+              >
             </li>
             <li class="nav-item">
               <router-link to="/Support" class="nav-link">Support</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/SubmissionWorkshop" class="nav-link">Workshop Submission</router-link>
+              <router-link to="/SubmissionWorkshop" class="nav-link"
+                >Workshop Submission</router-link
+              >
             </li>
             <li class="nav-item">
-              <router-link to="/Login" class="nav-link login-link" aria-label="Login">
+              <router-link
+                to="/Login"
+                class="nav-link login-link"
+                aria-label="Login"
+              >
                 <font-awesome-icon icon="right-to-bracket" class="login-icon" />
                 <span class="login-text">Login</span>
               </router-link>
@@ -47,12 +74,20 @@
         </div>
 
         <div class="social-icons d-none d-lg-flex">
-          <a href="https://www.facebook.com/objectlives/" target="_blank" class="social-icon">
-              <font-awesome-icon icon="fa-brands fa-facebook-f" />
-            </a>
-            <a href="https://x.com/i/flow/login?redirect_after_login=%2FObjectLives" target="_blank" class="social-icon">
-                <font-awesome-icon icon="fa-brands fa-x-twitter" />
-            </a>
+          <a
+            href="https://www.facebook.com/objectlives/"
+            target="_blank"
+            class="social-icon"
+          >
+            <font-awesome-icon icon="fa-brands fa-facebook-f" />
+          </a>
+          <a
+            href="https://x.com/i/flow/login?redirect_after_login=%2FObjectLives"
+            target="_blank"
+            class="social-icon"
+          >
+            <font-awesome-icon icon="fa-brands fa-x-twitter" />
+          </a>
         </div>
       </div>
     </nav>
@@ -64,8 +99,7 @@
 <script setup lang="ts"></script>
 
 <style lang="scss" scoped>
- @import '@/assets/variables.scss';
-
+@import "@/assets/variables.scss";
 
 .header-container {
   display: flex;
@@ -78,7 +112,6 @@ header {
 }
 
 h1 {
-  font-family: $fontFamily;
   font-size: 30px;
   background-color: rgba(199, 35, 35, 0);
   padding: 3px;
@@ -87,7 +120,7 @@ h1 {
 
 .navbar {
   background-color: black;
-  font-family: $fontFamily;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -109,7 +142,6 @@ h1 {
   color: #fff;
   font-size: 24px;
   margin-left: 11.8rem;
-
 }
 
 .login-text {
@@ -149,7 +181,6 @@ h1 {
   .login-link {
     order: 3;
     font-size: 15px;
-
   }
 
   .login-text {
@@ -163,9 +194,9 @@ h1 {
 
 @media (min-width: 921px) and (max-width: 1025px) {
   .login-link {
-    margin-left: 4rem; 
+    margin-left: 4rem;
     font-size: 13px;
-    margin-right: 0.5rem; 
+    margin-right: 0.5rem;
   }
 
   .nav-item {
@@ -175,7 +206,6 @@ h1 {
   .nav-links {
     order: 1;
     font-size: 10px;
-
   }
 
   .social-icons {
@@ -192,7 +222,6 @@ h1 {
     order: 3;
   }
 
-  
   .nav-link {
     white-space: nowrap;
   }
@@ -214,7 +243,6 @@ h1 {
     font-size: 15px;
   }
 
-
   .social-icons {
     order: 2;
     margin-right: 2rem;
@@ -222,8 +250,7 @@ h1 {
     a {
       font-size: 18px;
     }
-    
-    }
+  }
 
   .login-link {
     order: 3;
@@ -233,5 +260,4 @@ h1 {
     white-space: nowrap;
   }
 }
-
 </style>

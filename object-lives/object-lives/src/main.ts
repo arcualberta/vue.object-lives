@@ -10,6 +10,8 @@ import { faRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import * as ArcAuthorization from '@arc/authorization'
 import vue3GoogleLogin from 'vue3-google-login'
+import '@/assets/variables.scss';
+
 
 import 'vuetify/styles'
 import '@mdi/font/css/materialdesignicons.css'
@@ -54,4 +56,3 @@ app.use(router)
 app.use(vuetify)
 
 app.mount('#app')
-

@@ -1,25 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root {
+    --font-family: 'DM Sans', sans-serif;
+    --max-width: 100vw;
+    --heading-font-weight: bolder;
+    --heading-font-size: 20px;
+    --italic-font-weight: 800;
+    --font-size: 15px;
+    --available-font-weight: bold;
+    --margin-top: 20px;
+    --margin-bottom: 40px;
+    --min-value: 0;
+    --small-screen-breakpoint: 540px;
+  
+    // Light theme colors
+    --page-background-color: rgb(255, 255, 255);
+    --header-background-color: rgb(245, 245, 245);
+    --title-font-color: rgb(28, 23, 18);
+    --heading-color: rgb(40, 40, 40);
+    --text-font-color: rgb(60, 60, 60);
+    --link-color: rgb(50, 50, 200);
+  
+    // Dark theme colors
+    --dark-page-background-color: rgb(28, 23, 18);
+    --dark-header-background-color: rgb(40, 35, 30);
+    --dark-title-font-color: rgb(255, 255, 255);
+    --dark-heading-color: rgb(251, 250, 250);
+    --dark-text-font-color: rgb(200, 200, 200);
+    --dark-link-color: #20b0f3;
+}
 
-// Set the darkMode variable either to true or false
-$darkMode: true; 
-// $darkMode: false; 
-
-// Define the colors based on the darkMode variable
-$pageBackgroundColor: if($darkMode, rgb(28, 23, 18), rgb(255, 255, 255));
-$headerBackgroundColor: if($darkMode, rgb(40, 35, 30), rgb(245, 245, 245));
-$titleFontColor: if($darkMode, rgb(255, 255, 255), rgb(28, 23, 18));
-$headingColor: if($darkMode, rgb(251, 250, 250), rgb(40, 40, 40));
-$textFontColor: if($darkMode, rgb(200, 200, 200), rgb(60, 60, 60));
-$linkColor: if($darkMode, #20b0f3, rgb(50, 50, 200));
-
-$fontFamily: 'DM Sans';
-$maxWidth: 100vw;
-$headingFontWeight: bolder;
-$headingFontSize: 20px;
-$italicFontWeight: 800;
-$fontSize: 15px;
-$availableFontWeight: bold;
-$marginTop: 20px;
-$marginBottom: 40px;
-$minvalue: 0;
-$smallScreenBreakpoint: 280px;
+body.dark-mode {
+    --page-background-color: var(--dark-page-background-color);
+    --header-background-color: var(--dark-header-background-color);
+    --title-font-color: var(--dark-title-font-color);
+    --heading-color: var(--dark-heading-color);
+    --text-font-color: var(--dark-text-font-color);
+    --link-color: var(--dark-link-color);
+}
