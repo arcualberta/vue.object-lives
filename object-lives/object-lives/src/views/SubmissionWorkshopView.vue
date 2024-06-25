@@ -1,42 +1,58 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-import router from '../router'
-import { Guid } from 'guid-typescript'
-import { FormSubmission } from '@arc/form-submission'
-import { StatusCodes } from 'http-status-codes'
-import { createPinia } from 'pinia'
+  import { ref } from 'vue'
+  import { getActivePinia } from 'pinia'
+  import { useRoute } from 'vue-router'
+  import router from '../router'
+  import { Guid } from 'guid-typescript'
+  import { createPinia } from 'pinia';
+  // import {default as config} from "@/appsettings";
+  import { FormSubmission } from '@arc/form-submission'
+  import { StatusCodes } from 'http-status-codes'
 
-import { discoveryform } from '../discoveryForm'
+  import { discoveryform } from '../discoveryForm'
+  // import { useProfileStore } from '@/stores/ProfileStore'
+  // import { useApiRootsStore } from '@/stores/apiRootsStore'
+  
+  const route = useRoute()
+  const submissionId = route.params.submissionId as unknown as Guid
+  // const apiRootsStore = useApiRootsStore();
+  const formSubmissionCallback = (submissionStatus:StatusCodes): void => {
+      if(submissionStatus == StatusCodes.OK){
+        router.push({name:'success'})
+      }
+  }
+
+
 
 const pinia = createPinia() 
-const route = useRoute()
-const submissionId = route.params.submissionId as unknown as Guid
-const formSubmissionCallback = (submissionStatus: StatusCodes): void => {
-  if (submissionStatus == StatusCodes.OK) {
-    router.push({ name: 'success' })
-  }
-}
-</script>
 
+  // const store = useProfileStore()
+  // store.formSubmissionMode = "CREATE";
+  
+</script>
 <template>
-  <div class="container">
-    <div class="inner-container form-details">
-      <FormSubmission
-        securityToken=""
-        :is-update="false"
-        :form-template="discoveryform"
-        :pinia-instance="pinia"
-        :tanent-id="('95302eb2-596e-ceb7-4de6-5917b29d5fa2' as unknown as Guid)"
-        :msg="''"
-        @arc-form-submit="formSubmissionCallback"
-      />
+  <div class="container">   
+      <div class="inner-container form-details">
+      <FormSubmission 
+      :solrCoreURL = "'http://localhost:8983/solr/object-lives/'"
+      :api-root = "'https://localhost:7148'"
+      :data-store = "'Solr'"
+      securityToken = ""
+      :is-update = "false"
+      :form-template = "discoveryform"
+      :pinia-instance = "pinia" 
+      :tanent-id = "('95302eb2-596e-ceb7-4de6-5917b29d5fa2' as unknown as Guid)"
+      :msg = "''" 
+      @arc-form-submit = "formSubmissionCallback"
+      >
+    </FormSubmission>
     </div>
   </div>
 </template>
 
 <style>
-.ext-option-button{
-  background-color: #327D49;
+.ext-option-button {
+  background-color: #327d49;
   color: white;
   border-radius: 5px;
   border: none;
@@ -44,36 +60,32 @@ const formSubmissionCallback = (submissionStatus: StatusCodes): void => {
   margin-bottom: 20px;
   margin-top: 10px;
 }
-.ext-op-delete{
+.ext-op-delete {
   margin-left: 10px;
 }
-.ext-option-text{
+.ext-option-text {
   margin-top: 5px;
 }
-.collapse-button{
-  background-color: #327D49;
+.collapse-button {
+  background-color: #327d49;
   color: white;
   border: none;
   border-radius: 5px;
   height: 35px;
 }
-.composite-field-heading{
+.composite-field-heading {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 20px;
   text-align: left;
   position: absolute;
   left: 230px;
-  
-
 }
-.hovertext{
+.hovertext {
   display: none;
 }
-
-
-.add-button{
-  background-color: #327D49;
+.add-button {
+  background-color: #327d49;
   color: white;
   border-radius: 5px;
   border: none;
@@ -83,8 +95,8 @@ const formSubmissionCallback = (submissionStatus: StatusCodes): void => {
   top: -40px;
   left: -20px;
 }
-.submit-button{
-  background-color: #327D49;
+.submit-button {
+  background-color: #327d49;
   color: white;
   border-radius: 5px;
   border: none;
@@ -95,78 +107,79 @@ const formSubmissionCallback = (submissionStatus: StatusCodes): void => {
   left: 40px;
   color: white;
 }
-.form-details{
+.form-details {
   background-color: white;
   padding-top: 50px;
 }
-.create-profile-description{
+.create-profile-description {
   text-align: justify;
   margin-top: 100px;
 }
-.protection-description{
+.protection-description {
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 50px 25px 50px 25px;
   text-align: justify;
-  background-color: #F4F9F6;
+  background-color: #f4f9f6;
 }
-.info-field{
+.info-field {
   font-size: 24px;
   font-weight: 500;
-  color: #327D49;
+  color: #327d49;
 }
-.info-field-description{
+.info-field-description {
   font-size: 16px;
-    width: 100%;
-    color: #787878;
-    text-align: justify;
+  width: 100%;
+  color: #787878;
+  text-align: justify;
 }
-.required{
+.required {
   color: red;
 }
-.create-profile-heading{
+.create-profile-heading {
   margin-top: 100px;
   padding-top: 50px;
   font-size: 64px;
   font-weight: 500;
-  color: #327D49;
+  color: #327d49;
 }
-.form-background{
-  background-color: #F4F9F6;
+.form-background {
+  background-color: #f4f9f6;
 }
-.roots-of-change-url{ 
-  text-decoration:underline;
+.roots-of-change-url {
+  text-decoration: underline;
   color: black;
 }
-.delete-button{
-  float:right;
+.delete-button {
+  float: right;
 }
-.add-button{
-  float:right;
+.add-button {
+  float: right;
 }
-.compositeField{
+.compositeField {
   padding: 10px;
   margin-bottom: 30px;
-  position:relative;
-  right: -10px;
+  position: relative;
+  right: -1px;
   bottom: -50px;
   height: 600px;
-  width: 1200px;
+  width: 1089px;
 }
-.lightGrayBorder{
+.lightGrayBorder {
   border: 1px solid lightgray;
   border-radius: 5px;
 }
 /* insert field button*/
-.insertFieldBtn{
-    text-align: center;
-    width: 100%;
-   }
-.fontSize2em{
-    font-size: 2rem;
+.insertFieldBtn {
+  text-align: center;
+  width: 100%;
 }
-.inner-container{
+.fontSize2em {
+  font-size: 2rem;
+}
+.inner-container {
   padding-left: 100px;
   padding-right: 100px;
 }
 </style>
+
