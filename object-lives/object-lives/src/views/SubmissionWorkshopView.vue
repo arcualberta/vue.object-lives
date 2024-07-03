@@ -11,10 +11,10 @@
 
   import { discoveryform } from '../discoveryForm'
   // import { useProfileStore } from '@/stores/ProfileStore'
-  // import { useApiRootsStore } from '@/stores/apiRootsStore'
+  // import { useApiRootsStore } from '@/store/apiRootsStore'
   
   const route = useRoute()
-  const submissionId = route.params.submissionId as unknown as Guid
+  // const submissionId = route.params.submissionId as unknown as Guid
   // const apiRootsStore = useApiRootsStore();
   const formSubmissionCallback = (submissionStatus:StatusCodes): void => {
       if(submissionStatus == StatusCodes.OK){
