@@ -39,7 +39,7 @@ const vuetify = createVuetify({
 
 
 const app = createApp(App)
-const pinia = createPinia()
+const pinia = createPinia();
 
 
 library.add(fab, faRightToBracket)
