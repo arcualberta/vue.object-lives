@@ -1,27 +1,30 @@
 <script setup lang="ts">
 import { getActivePinia } from "pinia";
-import type { AuthorizationResult } from "@arc/authorization";
 import { useRouter } from "vue-router";
-
-interface AuthResult {
-  userId: string;
-  accessToken: string;
-}
+import { AuthorizationResult } from "@arc/authorization";
+import { useProfileStore } from "@/store/ProfileStore";
 
 const router = useRouter();
 const apiRoot = "https://auth-test.artsrn.ualberta.ca/v1";
 const tenantId = "95302eb2-596e-ceb7-4de6-5917b29d5fa2";
+const profileStore = useProfileStore();
 
 const handleAuthorizationResult = (authResult: AuthorizationResult) => {
+  // Store authorization result in session storage
   sessionStorage.setItem("authResult", JSON.stringify(authResult));
+  profileStore.userLoginResult = authResult.loginResult;
+  profileStore.userLoginToken = authResult.jwtToken;
+
+  // Redirect back to previous page
   router.go(-1);
 };
 </script>
 
 <template>
-  <div class="container login-pannel">
-    <div class="login-lable">Login with Google</div>
-    <div class="button-centre">
+  <div class="container login-panel">
+    <div class="login-label">Login with Google</div>
+    <div class="button-center">
+      <!-- Login component with props -->
       <Login
         :pinia-instance="getActivePinia()"
         :tenantId="tenantId"
@@ -33,15 +36,15 @@ const handleAuthorizationResult = (authResult: AuthorizationResult) => {
 </template>
 
 <style lang="scss" scoped>
-.login-pannel {
+.container {
   margin-top: 200px;
   margin-bottom: 300px;
 }
-.button-centre {
+.button-center {
   margin-top: 50px;
   text-align: center;
 }
-.login-lable {
+.login-label {
   font-size: 32px;
   font-weight: 600;
   color: #327d49;

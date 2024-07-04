@@ -9,24 +9,61 @@
       />
       <label for="theme-toggle">Toggle Theme</label>
     </div>
-    <SiteHeader />
+    <SiteHeader @logout="logout" />
     <div class="content-container flex-grow-1">
       <router-view />
     </div>
     <SiteFooter />
   </div>
 </template>
-<script setup>
-import { ref } from "vue";
+
+<script setup lang="ts">
+import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
+import { AuthorizationResult } from "@arc/authorization";
 import SiteHeader from "./components/SiteHeader.vue";
 import SiteFooter from "./components/SiteFooter.vue";
+import { useProfileStore } from "./store/ProfileStore";
+import { useApiRootsStore } from "./store/apiRootsStore";
+import { default as config } from "./appsettings";
 
 const isDarkMode = ref(false);
+const router = useRouter();
+const profileStore = useProfileStore();
+const apiRootsStore = useApiRootsStore();
+
+// Configure API roots
+apiRootsStore._authRoot = config.auth;
+apiRootsStore._solrRoot = config.solr;
+apiRootsStore._solrCore = config.solrCore;
+
+console.log("URL: ", window.location?.host);
+console.log("Auth: ", apiRootsStore.authRoot);
+console.log("Solr: ", apiRootsStore.solrRoot);
 
 function toggleTheme() {
   document.body.className = isDarkMode.value ? "dark-mode" : "";
 }
+
+// Check for authorization result on page load
+onMounted(() => {
+  const sessionAuthResult = sessionStorage.getItem("authResult");
+  if (sessionAuthResult && sessionAuthResult !== "undefined") {
+    const authResult = JSON.parse(sessionAuthResult) as AuthorizationResult;
+    profileStore.userLoginResult = authResult.loginResult;
+    profileStore.userLoginToken = authResult.jwtToken;
+  }
+});
+
+// Logout function
+const logout = () => {
+  profileStore.userLoginToken = null;
+  profileStore.userLoginResult = null;
+  sessionStorage.removeItem("authResult");
+  return false;
+};
 </script>
+
 <style scoped>
 :global(body) {
   font-family: var(--font-family);
