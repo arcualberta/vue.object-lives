@@ -21,3 +21,4 @@ export { default as SarahNesbittView } from './contributors/SarahNesbittView.vue
 export { default as SusanBerryView } from './contributors/SusanBerryView.vue'
 export { default as loginView } from './loginView.vue'
 export { default as SubmissionWorkshopView } from './SubmissionWorkshopView.vue'
+export { default as success } from './Success.vue'
