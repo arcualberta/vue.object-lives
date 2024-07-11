@@ -20,7 +20,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
-import { AuthorizationResult } from "@arc/authorization";
+import type { AuthorizationResult } from "@arc/authorization";
 import SiteHeader from "./components/SiteHeader.vue";
 import SiteFooter from "./components/SiteFooter.vue";
 import { useProfileStore } from "./store/ProfileStore";

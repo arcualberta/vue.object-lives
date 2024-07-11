@@ -60,7 +60,7 @@
                 >Workshop Submission</router-link
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item" v-if="!isLoggedIn">
               <router-link
                 to="/Login"
                 class="nav-link login-link"
@@ -69,6 +69,18 @@
                 <font-awesome-icon icon="right-to-bracket" class="login-icon" />
                 <span class="login-text">Login</span>
               </router-link>
+            </li>
+            <li class="nav-item" v-else>
+              <button
+                @click="$emit('logout')"
+                class="nav-link btn btn-link logout-link"
+              >
+                <font-awesome-icon
+                  icon="right-from-bracket"
+                  class="login-icon"
+                />
+                <span class="logout-text">Logout</span>
+              </button>
             </li>
           </ul>
         </div>
@@ -94,9 +106,14 @@
   </div>
 </template>
 
+<script setup lang="ts">
+import { computed } from "vue";
+import { useProfileStore } from "@/store/ProfileStore";
 
+const profileStore = useProfileStore();
 
-<script setup lang="ts"></script>
+const isLoggedIn = computed(() => !!profileStore.userLoginToken);
+</script>
 
 <style lang="scss" scoped>
 @import "@/assets/variables.scss";
@@ -137,15 +154,21 @@ h1 {
   }
 }
 
-.login-link {
+.login-link,
+.logout-link {
   display: inline-block;
   color: #fff;
   font-size: 24px;
   margin-left: 11.8rem;
 }
 
-.login-text {
+.login-text,
+.logout-text {
   display: none;
+}
+
+.logout-link .logout-icon {
+  margin-right: 8px;
 }
 
 .social-icons {
@@ -165,7 +188,8 @@ h1 {
 }
 
 @media (min-width: 280px) and (max-width: 920px) {
-  .login-link {
+  .login-link,
+  .logout-link {
     margin-left: 0;
   }
 
@@ -178,12 +202,14 @@ h1 {
     margin-right: 0;
   }
 
-  .login-link {
+  .login-link,
+  .logout-link {
     order: 3;
     font-size: 15px;
   }
 
-  .login-text {
+  .login-text,
+  .logout-text {
     display: inline-block;
   }
 
@@ -193,7 +219,8 @@ h1 {
 }
 
 @media (min-width: 921px) and (max-width: 1025px) {
-  .login-link {
+  .login-link,
+  .logout-link {
     margin-left: 4rem;
     font-size: 13px;
     margin-right: 0.5rem;
@@ -218,7 +245,8 @@ h1 {
     }
   }
 
-  .login-link {
+  .login-link,
+  .logout-link {
     order: 3;
   }
 
@@ -228,7 +256,8 @@ h1 {
 }
 
 @media (min-width: 1026px) and (max-width: 1280px) {
-  .login-link {
+  .login-link,
+  .logout-link {
     margin-left: 7rem;
     margin-right: 1.4rem;
     font-size: 18px;
@@ -252,7 +281,8 @@ h1 {
     }
   }
 
-  .login-link {
+  .login-link,
+  .logout-link {
     order: 3;
   }
 
