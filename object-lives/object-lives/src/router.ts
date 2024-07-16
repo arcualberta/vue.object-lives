@@ -9,6 +9,7 @@ import {
   SupportView,
   loginView,
   SubmissionWorkshopView,
+  success,
 } from "@/views";
 import {
   AnnetteView,
@@ -137,6 +138,11 @@ const routes = [
     path: "/Login",
     name: "LoginView",
     component: loginView,
+  },
+  {
+    path: "/success",
+    name: "success",
+    component: success,
   },
   {
     path: "/SubmissionWorkshop",
