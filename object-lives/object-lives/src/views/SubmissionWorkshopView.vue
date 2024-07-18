@@ -1,51 +1,48 @@
 <script setup lang="ts">
-  import { ref } from 'vue'
-  import { getActivePinia } from 'pinia'
-  import { useRoute } from 'vue-router'
-  import router from '../router'
-  import { Guid } from 'guid-typescript'
-  import { createPinia } from 'pinia';
-  // import {default as config} from "@/appsettings";
-  import { FormSubmission } from '@arc/form-submission'
-  import { StatusCodes } from 'http-status-codes'
+import { ref } from "vue";
+import { getActivePinia } from "pinia";
+import { useRoute } from "vue-router";
+import router from "../router";
+import { Guid } from "guid-typescript";
 
-  import { discoveryform } from '../discoveryForm'
-  // import { useProfileStore } from '@/stores/ProfileStore'
-  // import { useApiRootsStore } from '@/store/apiRootsStore'
-  
-  const route = useRoute()
-  // const submissionId = route.params.submissionId as unknown as Guid
-  // const apiRootsStore = useApiRootsStore();
-  const formSubmissionCallback = (submissionStatus:StatusCodes): void => {
-      if(submissionStatus == StatusCodes.OK){
-        router.push({name:'success'})
-      }
+import { default as config } from "../appsettings";
+import { FormSubmission } from "@arc/form-submission";
+import { StatusCodes } from "http-status-codes";
+
+import { discoveryform } from "../discoveryForm";
+// import { useProfileStore } from '@/stores/ProfileStore'
+// import { useApiRootsStore } from '@/store/apiRootsStore'
+
+const route = useRoute();
+// const submissionId = route.params.submissionId as unknown as Guid
+// const apiRootsStore = useApiRootsStore();
+const formSubmissionCallback = (submissionStatus: StatusCodes): void => {
+  if (submissionStatus == StatusCodes.OK) {
+    router.push({ name: "success" });
   }
+};
 
-
-
-const pinia = createPinia() 
-
-  // const store = useProfileStore()
-  // store.formSubmissionMode = "CREATE";
-  
+// const store = useProfileStore()
+// store.formSubmissionMode = "CREATE";
+console.log("SOLRAPI");
+console.log(config.solr);
 </script>
 <template>
-  <div class="container">   
-      <div class="inner-container form-details">
-      <FormSubmission 
-      :solrCoreURL = "'http://localhost:8983/solr/object-lives/'"
-      :api-root = "'https://localhost:7148'"
-      :data-store = "'Solr'"
-      securityToken = ""
-      :is-update = "false"
-      :form-template = "discoveryform"
-      :pinia-instance = "pinia" 
-      :tanent-id = "('95302eb2-596e-ceb7-4de6-5917b29d5fa2' as unknown as Guid)"
-      :msg = "''" 
-      @arc-form-submit = "formSubmissionCallback"
+  <div class="container">
+    <div class="inner-container form-details">
+      <FormSubmission
+        :solr-core-url="''"
+        :api-root="config.solr"
+        :data-store="'Solr'"
+        securityToken=""
+        :is-update="false"
+        :form-template="discoveryform"
+        :pinia-instance="getActivePinia()"
+        :tanent-id="('95302eb2-596e-ceb7-4de6-5917b29d5fa2' as unknown as Guid)"
+        :msg="''"
+        @arc-form-submit="formSubmissionCallback"
       >
-    </FormSubmission>
+      </FormSubmission>
     </div>
   </div>
 </template>
@@ -182,4 +179,3 @@ const pinia = createPinia()
   padding-right: 100px;
 }
 </style>
-
