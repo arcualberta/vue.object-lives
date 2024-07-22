@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { getActivePinia } from "pinia";
+import { getActivePinia, type Pinia } from "pinia";
+
 import { useRoute } from "vue-router";
 import router from "../router";
 import { Guid } from "guid-typescript";
@@ -25,20 +26,20 @@ const formSubmissionCallback = (submissionStatus: StatusCodes): void => {
 // const store = useProfileStore()
 // store.formSubmissionMode = "CREATE";
 console.log("SOLRAPI");
-console.log(config.solr);
+console.log(config.solrApi);
 </script>
 <template>
   <div class="container">
     <div class="inner-container form-details">
       <FormSubmission
         :solr-core-url="''"
-        :api-root="config.solr"
+        :api-root="config.solrApi"
         :data-store="'Solr'"
         securityToken=""
         :is-update="false"
         :form-template="discoveryform"
-        :pinia-instance="getActivePinia()"
-        :tanent-id="('95302eb2-596e-ceb7-4de6-5917b29d5fa2' as unknown as Guid)"
+        :pinia-instance="getActivePinia() as Pinia"
+        :tanent-id="config.tenantId"
         :msg="''"
         @arc-form-submit="formSubmissionCallback"
       >
