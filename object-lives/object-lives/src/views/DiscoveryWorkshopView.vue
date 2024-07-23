@@ -1,3 +1,15 @@
+<script setup lang="ts">
+import { ref, onMounted } from "vue";
+import { useWorkshopStore } from "../store/workshopStore";
+
+const workshopStore = useWorkshopStore();
+
+onMounted(() => {
+  if (!workshopStore.dataFetched) {
+    workshopStore.fetchData();
+  }
+});
+</script>
 <template>
   <div class="discovery-workshop">
     <div class="content">
@@ -51,24 +63,19 @@
         </p>
       </div>
       <div class="right-column">
-        <img src="../assets/pad-saddle.jpg" alt="Pad Saddles" />
-        <div class="image-description">
-          <h2>PAD SADDLES</h2>
-          <p>April 10, 2017</p>
-          <p>
-            At our Oxford workshop in May 2015, Object Lives participants worked
-            with this stunning saddle. We know very little about its history,
-            although we can tell from the style of porcupine quillwork that it
-            is from the northern Plains and likely dates to the first half of
-            the 19th
-          </p>
+        <div v-if="workshopStore.searchResult">
+          <h2>Workshop Results</h2>
+          <pre>{{
+            JSON.stringify(workshopStore.searchResult.resultEntries, null, 2)
+          }}</pre>
+        </div>
+        <div v-else>
+          <p>Loading workshop data...</p>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");

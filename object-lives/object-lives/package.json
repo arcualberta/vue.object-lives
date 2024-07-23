@@ -12,8 +12,9 @@
   },
   "dependencies": {
     "@arc/arc-foundation": "^0.5.39",
-    "@arc/authorization": "^0.0.25",
-    "@arc/form-submission": "^0.1.113",
+    "@arc/arc-solr": "^0.0.3",
+    "@arc/authorization": "^0.0.24",
+    "@arc/form-submission": "^0.1.110",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
