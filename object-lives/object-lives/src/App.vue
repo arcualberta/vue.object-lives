@@ -24,22 +24,16 @@ import type { AuthorizationResult } from "@arc/authorization";
 import SiteHeader from "./components/SiteHeader.vue";
 import SiteFooter from "./components/SiteFooter.vue";
 import { useProfileStore } from "./store/ProfileStore";
-import { useApiRootsStore } from "./store/apiRootsStore";
 import { default as config } from "./appsettings";
 
 const isDarkMode = ref(false);
 const router = useRouter();
 const profileStore = useProfileStore();
-const apiRootsStore = useApiRootsStore();
 
-// Configure API roots
-apiRootsStore._authRoot = config.auth;
-apiRootsStore._solrRoot = config.solr;
-apiRootsStore._solrCore = config.solrCore;
 
 console.log("URL: ", window.location?.host);
-console.log("Auth: ", apiRootsStore.authRoot);
-console.log("Solr: ", apiRootsStore.solrRoot);
+console.log("Auth: " + config.dev.auth);
+console.log("Solr: " + config.dev.solr);
 
 function toggleTheme() {
   document.body.className = isDarkMode.value ? "dark-mode" : "";

@@ -70,7 +70,7 @@ onMounted(() => {
           }}</pre>
         </div>
         <div v-else>
-          <p>Loading workshop data...</p>
+          <p>No Data</p>
         </div>
       </div>
     </div>

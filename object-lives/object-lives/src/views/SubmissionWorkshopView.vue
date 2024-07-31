@@ -33,7 +33,7 @@ console.log(config.solrApi);
     <div class="inner-container form-details">
       <FormSubmission
         :solr-core-url="''"
-        :api-root="config.solrApi"
+        :api-root="config.dev.solr"
         :data-store="'Solr'"
         securityToken=""
         :is-update="false"
