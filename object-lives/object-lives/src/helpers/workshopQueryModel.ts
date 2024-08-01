@@ -7,7 +7,7 @@ type SolrFieldValueType = string | string[] | number | number[] | Date | Date[] 
 
 function getSolrFieldValue(item: SolrResultEntry, solrFieldName: string): SolrFieldValueType {
     if (item?.data) {
-        return item.data.find((entry: { key: string; }) => entry.key === solrFieldName)?.value;
+        return item.data.find(entry => entry.key === solrFieldName)?.value as SolrFieldValueType;
     }
     return null;
 }

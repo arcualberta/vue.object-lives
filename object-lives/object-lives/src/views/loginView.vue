@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { getActivePinia } from "pinia";
 import { useRouter } from "vue-router";
-import { AuthorizationResult } from "@arc/authorization";
+import type { AuthorizationResult } from "@arc/authorization";
 import { useProfileStore } from "@/store/ProfileStore";
 
 const router = useRouter();

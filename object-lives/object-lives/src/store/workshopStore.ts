@@ -26,9 +26,9 @@ export const useWorkshopStore = defineStore("workshopStore", {
   actions: {
     fetchData() {
       try {
-        console.log("solRAPI .." , config.dev.solr)
+        console.log("solRAPI .." , config.solr)
         fetchQuery(
-          config.dev.solr, // solrApiRoot
+          config.solr, // solrApiRoot
           " ", // freeText
           null, // queryModel
           [], // freeTextSearchTargetFieldNames

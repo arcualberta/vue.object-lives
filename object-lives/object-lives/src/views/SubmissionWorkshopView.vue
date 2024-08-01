@@ -26,14 +26,13 @@ const formSubmissionCallback = (submissionStatus: StatusCodes): void => {
 // const store = useProfileStore()
 // store.formSubmissionMode = "CREATE";
 console.log("SOLRAPI");
-console.log(config.solrApi);
 </script>
 <template>
   <div class="container">
     <div class="inner-container form-details">
       <FormSubmission
         :solr-core-url="''"
-        :api-root="config.dev.solr"
+        :api-root="config.solr"
         :data-store="'Solr'"
         securityToken=""
         :is-update="false"
