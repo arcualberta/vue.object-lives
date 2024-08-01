@@ -23,4 +23,32 @@ export const useWorkshopStore = defineStore("workshopStore", {
 
   },
    
+  actions: {
+    fetchData() {
+      try {
+        console.log("solRAPI .." , config.dev.solr)
+        fetchQuery(
+          config.dev.solr, // solrApiRoot
+          " ", // freeText
+          null, // queryModel
+          [], // freeTextSearchTargetFieldNames
+          config.tenantId.toString(), // tenantId
+          "", // searchResultFieldMapping
+          this.offset, // offset
+          this.pageSize, // pageSize
+          (result: SolrSearchResult) => {
+            this.searchResult = result;
+            this.dataFetched = true;
+            console.log("Fetch Data Result:", result);
+            console.log(
+              "Number of Result Entries:",
+              result.resultEntries?.length ?? 0
+            );
+          }
+        );
+      } catch (error) {
+        console.error("Error in fetchData:", error);
+      }
+    },
+  },
 });
