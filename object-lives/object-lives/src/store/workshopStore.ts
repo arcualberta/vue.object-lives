@@ -33,7 +33,7 @@ export const useWorkshopStore = defineStore("workshopStore", {
           null, // queryModel
           [], // freeTextSearchTargetFieldNames
           config.tenantId.toString(), // tenantId
-          "", // searchResultFieldMapping
+          null, // sortBy
           this.offset, // offset
           this.pageSize, // pageSize
           (result: SolrSearchResult) => {

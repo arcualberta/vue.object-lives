@@ -32,8 +32,8 @@ const profileStore = useProfileStore();
 
 
 console.log("URL: ", window.location?.host);
-console.log("Auth: " + config.dev.auth);
-console.log("Solr: " + config.dev.solr);
+console.log("Auth: " + config.auth);
+console.log("Solr: " + config.solr);
 
 function toggleTheme() {
   document.body.className = isDarkMode.value ? "dark-mode" : "";

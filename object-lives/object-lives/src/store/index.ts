@@ -1,6 +1,6 @@
 import { Guid } from "guid-typescript";
 import * as config from "../appsettings";
-import {
+import type {
   SolrQuery,
   SolrSearchResult,
 } from "@arc/arc-foundation/lib/solr/models";
