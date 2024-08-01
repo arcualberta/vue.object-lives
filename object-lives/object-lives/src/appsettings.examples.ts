@@ -5,7 +5,7 @@ let app = "";
 let auth = "";
 let solr = "";
 let solrCore = "";
-if(window.location.host.indexOf("object-lives-test.artsrn.ualberta.ca") >= 0){
+if(window.location.host.indexOf("object-lives.artsrn.ualberta.ca") >= 0){
     //Prod Server
     googleClientId = "*********************************";
     app = "https://skipp.artsrn.ualberta.ca";
