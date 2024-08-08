@@ -8,10 +8,9 @@ export const useWorkshopStore = defineStore("workshopStore", {
     ...baseState,
     dataFetched: false,
     searchResult: null as SolrSearchResult | null,
+    _workshopSubmissions: [] as any[], // Added this line
     offset: 0,
     pageSize: 1000,
-    
-   // searchResultFieldMapping: config.SearchResultFieldMapping.NAME,
   }),
 
   getters: {
@@ -20,13 +19,12 @@ export const useWorkshopStore = defineStore("workshopStore", {
         ? state.searchResult.resultEntries.length
         : 0;
     },
-
   },
-   
+
   actions: {
     fetchData() {
       try {
-        console.log("solRAPI .." , config.solr)
+        console.log("solRAPI ..", config.solr);
         fetchQuery(
           config.solr, // solrApiRoot
           " ", // freeText
@@ -48,6 +46,27 @@ export const useWorkshopStore = defineStore("workshopStore", {
         );
       } catch (error) {
         console.error("Error in fetchData:", error);
+      }
+    },
+
+    loadWorkshopSubmissions() {
+      try {
+        fetchQuery(
+          config.solr, // solrApiRoot
+          " ", // freeText, adjust if needed
+          null, // queryModel, adjust if needed
+          [], // freeTextSearchTargetFieldNames, adjust if needed
+          config.tenantId.toString(), // tenantId
+          null, // sortBy, adjust if needed
+          this.offset, // offset
+          this.pageSize, // pageSize
+          (result: SolrSearchResult) => {
+            this._workshopSubmissions = result.resultEntries || [];
+            console.log("Workshop Submissions Loaded:", this._workshopSubmissions);
+          }
+        );
+      } catch (error) {
+        console.error("Error loading workshop submissions:", error);
       }
     },
   },

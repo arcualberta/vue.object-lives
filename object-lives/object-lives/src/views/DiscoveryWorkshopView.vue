@@ -1,15 +1,3 @@
-<script setup lang="ts">
-import { ref, onMounted } from "vue";
-import { useWorkshopStore } from "../store/workshopStore";
-
-const workshopStore = useWorkshopStore();
-
-onMounted(() => {
-  if (!workshopStore.dataFetched) {
-    workshopStore.fetchData();
-  }
-});
-</script>
 <template>
   <div class="discovery-workshop">
     <div class="content">
@@ -63,11 +51,9 @@ onMounted(() => {
         </p>
       </div>
       <div class="right-column">
-        <div v-if="workshopStore.searchResult">
+        <div v-if="workshopStore._workshopSubmissions.length > 0">
           <h2>Workshop Results</h2>
-          <pre>{{
-            JSON.stringify(workshopStore.searchResult.resultEntries, null, 2)
-          }}</pre>
+          <pre>{{ JSON.stringify(workshopStore._workshopSubmissions, null, 2) }}</pre>
         </div>
         <div v-else>
           <p>No Data</p>
@@ -76,6 +62,19 @@ onMounted(() => {
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { onMounted } from 'vue';
+import { useWorkshopStore } from '../store/workshopStore';
+
+const workshopStore = useWorkshopStore();
+
+onMounted(() => {
+  if (!workshopStore.dataFetched) {
+    workshopStore.loadWorkshopSubmissions();
+  }
+});
+</script>
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
