@@ -26,7 +26,7 @@ export const discoveryform = {
                     {
                         "id": "24a59323-f82e-906a-8983-75701b886157",
                         "lang": "en",
-                        "value": "Banner Image"
+                        "value": "Please attach the main image "
                     },
                     {
                         "id": "4dfd4c17-7fad-e4d9-1246-4c155bb588ca",
@@ -60,7 +60,7 @@ export const discoveryform = {
                     {
                         "id": "349da39c-718d-3901-69f8-5c7183f56546",
                         "lang": "en",
-                        "value": "Banner Text"
+                        "value": "Please add the text that will appear when the banner image is hover over"
                     },
                     {
                         "id": "0ec3180d-45ca-4f99-72b6-534d2e1b3479",
@@ -94,7 +94,7 @@ export const discoveryform = {
                     {
                         "id": "c6212bdc-98ee-da8c-d59e-2ae5561cdab0",
                         "lang": "en",
-                        "value": "Title name"
+                        "value": "Please mention the title."
                     },
                     {
                         "id": "de478a42-be5f-271a-4246-4b8534e7a074",
@@ -128,7 +128,7 @@ export const discoveryform = {
                     {
                         "id": "babe2609-2be5-7400-06b6-2b68b771534f",
                         "lang": "en",
-                        "value": "Date"
+                        "value": "Please enter the date"
                     },
                     {
                         "id": "564f4fb2-1581-6dab-49d1-5459ae609133",
@@ -165,7 +165,7 @@ export const discoveryform = {
                     {
                         "id": "2ee54e57-7303-a591-a781-a5841d4cc41a",
                         "lang": "en",
-                        "value": "Abstract Text"
+                        "value": ""
                     },
                     {
                         "id": "f724becf-f23e-fe4f-374e-9afe51bac901",
@@ -177,32 +177,32 @@ export const discoveryform = {
             "type": 2
         },
         {
-            "id": "3db330bd-74dc-8d6b-31db-7bac76b5a676",
+            "id": "99a0e1c1-ac21-3ee9-a0e7-f772d67002c4",
             "title": {
-                "id": "ec11def2-59a7-81a0-b1a4-c429e0566a1e",
+                "id": "d0b76259-0bd5-c1e8-a4a9-6c5d5aa651d7",
                 "values": [
                     {
-                        "id": "ea9c261f-1e52-3209-b5ac-5ca02356d952",
+                        "id": "4ccff1f9-6e7b-449c-e3a0-06ae2b0ffbd0",
                         "lang": "en",
-                        "value": "Author name"
+                        "value": "Author 1 name:"
                     },
                     {
-                        "id": "8d5b7fc6-c32e-c6c0-74a4-08c07729544b",
+                        "id": "9203fb5e-cb48-276b-2598-fb8ffeafd54d",
                         "lang": "fr",
                         "value": ""
                     }
                 ]
             },
             "description": {
-                "id": "9ca5990d-8b3b-f97d-3c4e-ef8279660742",
+                "id": "4a0a345f-2b5c-8311-5eec-c96a34ed636e",
                 "values": [
                     {
-                        "id": "e2ceca9a-4d96-11ec-8140-e9c5a66dfca9",
+                        "id": "610d1795-fcec-b8d3-4249-eb2bf625e298",
                         "lang": "en",
-                        "value": "Author name"
+                        "value": ""
                     },
                     {
-                        "id": "4bcd677e-143f-422f-a577-0ccb0b329ee1",
+                        "id": "41dc80da-d7b6-388e-55a5-a000e6f9efd6",
                         "lang": "fr",
                         "value": ""
                     }
@@ -211,32 +211,100 @@ export const discoveryform = {
             "type": 0
         },
         {
-            "id": "a3088250-70f9-5cda-5ba5-127518b5528c",
+            "id": "3a43c63d-562c-a312-2f79-57c930249e8e",
             "title": {
-                "id": "e045c218-be8b-1886-278b-2036e3b3d82e",
+                "id": "2f7f7e9d-a5a0-f7f3-64fd-f44e03300549",
                 "values": [
                     {
-                        "id": "4b859c76-1198-1b5f-59b6-e41449471f35",
+                        "id": "730481f4-beb7-5198-09b3-7eed4f84b17d",
                         "lang": "en",
-                        "value": "Author Page link"
+                        "value": "Author 1 url link:"
                     },
                     {
-                        "id": "ff28cea0-0c71-007a-29a3-9300a8020d2c",
+                        "id": "3c8c53b7-543f-bf25-42d5-29e0a545b926",
                         "lang": "fr",
                         "value": ""
                     }
                 ]
             },
             "description": {
-                "id": "397903dc-1bb3-91d7-b529-5b756ccc9f6e",
+                "id": "c977a3ca-1016-d78f-a35c-2172a9ca02c1",
                 "values": [
                     {
-                        "id": "1aae26fd-3d0a-6402-dba3-6a84fc45ed4a",
+                        "id": "d471780a-bdab-13c5-93f0-f882adb07f13",
                         "lang": "en",
-                        "value": "Author Page link"
+                        "value": ""
                     },
                     {
-                        "id": "cebb6b88-d08f-d267-1ccd-01bc4f7dad33",
+                        "id": "23f28654-e20c-63d7-512c-122a2cc145c5",
+                        "lang": "fr",
+                        "value": ""
+                    }
+                ]
+            },
+            "type": 0
+        },
+        {
+            "id": "b52398dc-fc90-f426-1225-d6a1b94b8c67",
+            "title": {
+                "id": "94b030f6-d7e5-e0be-f0c0-31a9cdd6af09",
+                "values": [
+                    {
+                        "id": "a5c55940-07ac-c95f-69db-02f1e0f39d57",
+                        "lang": "en",
+                        "value": "Author 2 name:"
+                    },
+                    {
+                        "id": "ff716bcb-cdbf-9edd-4f42-164f69039ff5",
+                        "lang": "fr",
+                        "value": ""
+                    }
+                ]
+            },
+            "description": {
+                "id": "e3243eae-ebf9-fe06-3460-4a2697911db4",
+                "values": [
+                    {
+                        "id": "14cc8218-fd28-3459-65ff-708e2709725b",
+                        "lang": "en",
+                        "value": ""
+                    },
+                    {
+                        "id": "bc1da40c-f673-17ba-4df2-da5264e30fbb",
+                        "lang": "fr",
+                        "value": ""
+                    }
+                ]
+            },
+            "type": 0
+        },
+        {
+            "id": "15a61fb0-e2f2-8286-cd9f-b38102ecfe99",
+            "title": {
+                "id": "aa7a0754-bd6a-2080-3d8e-b2bcebad80ae",
+                "values": [
+                    {
+                        "id": "7318ef14-87ab-29ac-56f2-b299644f59d8",
+                        "lang": "en",
+                        "value": "Author 2 url link:"
+                    },
+                    {
+                        "id": "34ec6d8b-8547-2ce3-fcb9-552f6a169c82",
+                        "lang": "fr",
+                        "value": ""
+                    }
+                ]
+            },
+            "description": {
+                "id": "683e33ff-a289-44be-180d-5f9b57729c3c",
+                "values": [
+                    {
+                        "id": "e180c496-ddd3-4fa0-0328-fdb5c1e64e88",
+                        "lang": "en",
+                        "value": ""
+                    },
+                    {
+                        "id": "b1c859ea-c4c1-b21e-43f6-e8167555bcc7",
                         "lang": "fr",
                         "value": ""
                     }
@@ -267,7 +335,7 @@ export const discoveryform = {
                     {
                         "id": "09ab88ab-9236-4efe-a388-5e8b1f81f1d1",
                         "lang": "en",
-                        "value": "Tags"
+                        "value": "Please mention all the tags you want to add"
                     },
                     {
                         "id": "921f97f8-3a30-fbe2-91e2-c330ed53ab50",
@@ -301,7 +369,7 @@ export const discoveryform = {
                     {
                         "id": "6efdb033-5325-1536-416d-bbcb001ad2dc",
                         "lang": "en",
-                        "value": "Post item"
+                        "value": ""
                     },
                     {
                         "id": "1dde2a78-bd58-7f32-1f58-330a285ca2d3",
@@ -335,7 +403,7 @@ export const discoveryform = {
                             {
                                 "id": "1aefa791-d597-6c56-f82d-e8eb153d1247",
                                 "lang": "en",
-                                "value": "Post Image"
+                                "value": "Please attach the image here"
                             },
                             {
                                 "id": "387068da-4c72-42fe-f268-49f200e3e793",
@@ -369,7 +437,7 @@ export const discoveryform = {
                             {
                                 "id": "8ae136c8-e918-6dd1-3f17-682225cc46c7",
                                 "lang": "en",
-                                "value": "Item Hover Link"
+                                "value": "Please write the text you want to see when Image is being hovered"
                             },
                             {
                                 "id": "0b6fcb33-2a5c-ea67-04e0-9e637931f381",
@@ -403,7 +471,7 @@ export const discoveryform = {
                             {
                                 "id": "5d661fd0-b92f-5cdb-9855-488b3a1dd568",
                                 "lang": "en",
-                                "value": "Post item body"
+                                "value": "Please write your information here"
                             },
                             {
                                 "id": "4b9d9ae6-3a00-7602-952b-e9667e99ac70",
@@ -419,4 +487,3 @@ export const discoveryform = {
     ],
     "status": "Draft"
 }
-
