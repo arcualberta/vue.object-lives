@@ -14,7 +14,7 @@
     "@arc/arc-foundation": "^0.6.6",
     "@arc/arc-solr": "^0.0.9",
     "@arc/authorization": "^0.0.26",
-    "@arc/form-submission": "^0.1.110",
+    "@arc/form-submission": "^0.1.122",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
